@@ -1,5 +1,5 @@
 {
-  "name": "npm-publish-test",
+  "name": "tudou-publish-npm-test",
   "version": "1.0.0",
   "description": "学习发布npm包",
   "main": "index.js",
@@ -17,5 +17,9 @@
     "terser": "^5.16.1",
     "vite": "^4.0.4",
     "vite-plugin-compression": "^0.5.1"
-  }
+  },
+  "files": [
+    "dist/*",
+    "lib"
+  ]
 }
