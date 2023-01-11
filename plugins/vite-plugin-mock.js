@@ -23,7 +23,7 @@ export const vitePluginMock = (opt = {}) => {
     configureServer (server) {
       server.middlewares.use((req, res, next) => {
         if (req.url.indexOf(opt.defaultStr) > -1) {
-          const data = mockData.find((v) => req.url.indexOf(v.url) > -1 && v.method === req.method.toLowerCase())
+          const data = mockData.find((v) => req.url.indexOf(v.url) > -1)
           setHeader(res)
           res.end(JSON.stringify(data.response))
         } else {
