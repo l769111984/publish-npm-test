@@ -5,13 +5,17 @@ export default defineConfig({
         lib: {
             // Could also be a dictionary or array of multiple entry points
             entry: resolve(__dirname, 'index.js'),
-            name: 'MyLib',
+            name: 'MyMockPlugin',
             // the proper extensions will be added
-            fileName: 'my-lib',
-            formats: ['es','umd']
+            fileName: 'my-mock-plugin',
+            formats: ['es','cjs']
         },
+        rollupOptions: {
+            external:['fs', 'path']
+        }
     },
     plugins: [
-    ]
+    ],
+    
 
 })

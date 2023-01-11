@@ -1,8 +1,9 @@
 {
   "name": "tudou-publish-npm-test",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "学习发布npm包",
-  "main": "index.js",
+  "main": "./dist/my-mock-plugin.js",
+  "module": "./dist/my-mock-plugin.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "vite build"
@@ -20,6 +21,7 @@
   },
   "files": [
     "dist/*",
-    "lib"
+    "lib",
+    "plugins/*"
   ]
 }
