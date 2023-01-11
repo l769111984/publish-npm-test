@@ -4,12 +4,18 @@
   "description": "学习发布npm包",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build"
   },
   "keywords": [
     "发布包",
     "npm"
   ],
   "author": "l769111984",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "terser": "^5.16.1",
+    "vite": "^4.0.4",
+    "vite-plugin-compression": "^0.5.1"
+  }
 }
