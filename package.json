@@ -1,0 +1,15 @@
+{
+  "name": "npm-publish-test",
+  "version": "1.0.0",
+  "description": "学习发布npm包",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "发布包",
+    "npm"
+  ],
+  "author": "l769111984",
+  "license": "ISC"
+}
