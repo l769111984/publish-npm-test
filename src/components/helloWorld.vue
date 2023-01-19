@@ -1,13 +1,17 @@
 <template>
   <div>
-    主页来一波
+    hello-world
   </div>
 </template>
 
 <script setup lang="ts">
 
 </script>
-
+<script>
+export default {
+    name: 'HelloWorld'
+}
+</script>
 <style scoped>
 
 </style>

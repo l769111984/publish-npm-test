@@ -1,12 +1,13 @@
 <template>
-    <div>
-        登录一波
-    </div>
+  <div>
+    登录一波
+    <hello-world />
+  </div>
 </template>
 
 <script setup lang="ts">
-onBeforeMount(async ()=>{
-    console.log(inject('message'))
+onBeforeMount(() => {
+    console.log(inject('message')) 
 })
 </script>
 

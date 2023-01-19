@@ -1,22 +1,21 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "vite"
 import vue from '@vitejs/plugin-vue'
 import { vitePluginMock } from './plugins/vite-plugin-mock' 
 import mockData from './mock'
 import path from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-
 export default defineConfig({
     server: {
-        port: 8088,
+        port: 8088
     },
     resolve: {
       alias: [
         { find: /^~@\//, replacement: path.join(__dirname, 'src/') },
-        { find: /^@\//, replacement: path.join(__dirname, './src', import.meta.url)}
-      ],
+        { find: /^@\//, replacement: path.join(__dirname, './src', import.meta.url) }
+      ]
     },
-    plugins:[
+    plugins: [
         vue(),
         vitePluginMock({
           entry: '/mock',
@@ -24,17 +23,17 @@ export default defineConfig({
           mockData
         }),
         Components({
-          dts: true,
+          dts: true
         }),
         AutoImport({ 
           dts: true,
            eslintrc: {
-            enabled: true,
+            enabled: true
           },
           include: [
             /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
             /\.vue$/, /\.vue\?vue/, // .vue
-            /\.md$/, // .md
+            /\.md$/ // .md
           ],
           imports: [
             // presets
@@ -47,15 +46,15 @@ export default defineConfig({
                 'onBeforeRouteLeave', 
                 'onBeforeRouteUpdate',
                 'createRouter',
-                'createWebHistory',
+                'createWebHistory'
               ],
               'axios': [
                 // default imports
-                ['default', 'axios'], // import { default as axios } from 'axios',
-              ],
-            },
-          ],
-         }),
+                ['default', 'axios'] // import { default as axios } from 'axios',
+              ]
+            }
+          ]
+         })
     ],
     build: {
       outDir: 'viteDist',

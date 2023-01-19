@@ -1,7 +1,7 @@
 <template>
-    <div>
-        详情来一波
-    </div>
+  <div>
+    详情来一波
+  </div>
 </template>
 
 <script setup lang="ts">
