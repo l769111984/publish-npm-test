@@ -8,4 +8,7 @@ const router = createRouter({
     routes
 })
 
-createApp(App).use(router).mount('#app')
+const app = createApp(App)
+app.provide('message', 'hello')
+    .use(router)
+    .mount('#app')

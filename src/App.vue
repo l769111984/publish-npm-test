@@ -9,7 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeMount } from 'vue';
 import { getList } from './api'
 onBeforeMount(async ()=>{
     console.log(await getList())
